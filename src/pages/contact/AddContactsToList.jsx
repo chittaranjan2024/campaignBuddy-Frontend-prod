@@ -19,7 +19,7 @@ export default function AddContactToMailingList() {
       try {
         const userId = getUserId();
         const response = await axios.get(
-          `http://localhost:8080/api/contacts/not-in-mailinglist/${userId}/${mailingListId}`,
+          `https://campaignbuddy-prod.onrender.com/api/contacts/not-in-mailinglist/${userId}/${mailingListId}`,
           {
             headers: {
               Authorization: `Bearer ${getToken()}`,
@@ -42,7 +42,7 @@ export default function AddContactToMailingList() {
 
     try {
       await axios.post(
-        `http://localhost:8080/api/mailing-lists/${mailingListId}/contacts/${selectedContactId}`,
+        `https://campaignbuddy-prod.onrender.com/api/mailing-lists/${mailingListId}/contacts/${selectedContactId}`,
         {},
         {
           headers: {
