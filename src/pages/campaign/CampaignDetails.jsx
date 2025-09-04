@@ -12,7 +12,7 @@ const CampaignDetails = () => {
 
   const fetchCampaignDetails = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/api/campaigns/${id}`);
+      const res = await axios.get(`https://campaignbuddy-prod.onrender.com/api/campaigns/${id}`);
       setCampaign(res.data);
     } catch (err) {
       console.error('Error fetching campaign details:', err);
