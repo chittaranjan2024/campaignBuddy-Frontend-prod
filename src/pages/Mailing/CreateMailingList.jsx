@@ -17,7 +17,7 @@ export default function CreateMailingList() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/mailing-lists/create",
+        "http://https://campaignbuddy-prod.onrender.com/api/mailing-lists/create",
         {
           name: listName,
           description: description,
