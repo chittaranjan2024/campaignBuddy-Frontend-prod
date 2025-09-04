@@ -22,7 +22,7 @@ export default function EditContact() {
     if (!token) return;
 
     axios
-      .get(`http://localhost:8080/api/contacts/${id}`, {
+      .get(`https://campaignbuddy-prod.onrender.com/api/contacts/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ export default function EditContact() {
     if (!token) return;
 
     axios
-      .put(`http://localhost:8080/api/contacts/${id}`, formData, {
+      .put(`https://campaignbuddy-prod.onrender.com/api/contacts/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
