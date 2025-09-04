@@ -27,7 +27,7 @@ export default function EditCampaign() {
 
     const fetchCampaign = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/campaigns/${id}`, {
+        const res = await axios.get(`https://campaignbuddy-prod.onrender.com/api/campaigns/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCampaign(res.data);
@@ -49,7 +49,7 @@ export default function EditCampaign() {
   useEffect(() => {
     if (!userId || !token) return;
     axios
-      .get(`http://localhost:8080/api/mailing-lists/user/${userId}`, {
+      .get(`https://campaignbuddy-prod.onrender.com/api/mailing-lists/user/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMailingLists(res.data))
@@ -60,7 +60,7 @@ export default function EditCampaign() {
   useEffect(() => {
     if (!userId || !token) return;
     axios
-      .get(`http://localhost:8080/api/templates/user/${userId}`, {
+      .get(`https://campaignbuddy-prod.onrender.com/api/templates/user/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setTemplates(res.data))
@@ -93,7 +93,7 @@ export default function EditCampaign() {
 
     try {
       const res = await axios.put(
-        `http://localhost:8080/api/campaigns/${id}`,
+        `https://campaignbuddy-prod.onrender.com/api/campaigns/${id}`,
         updatedCampaign,
         { headers: { Authorization: `Bearer ${token}` } }
       );
