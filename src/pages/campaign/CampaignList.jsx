@@ -14,7 +14,7 @@ export default function CampaignList() {
       if (!userId || !token) return;
       try {
         const res = await axios.get(
-          `http://localhost:8080/api/campaigns/created-by/${userId}`,
+          `https://campaignbuddy-prod.onrender.com/api/campaigns/created-by/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
