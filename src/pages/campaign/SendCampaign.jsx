@@ -17,7 +17,7 @@ export default function SendCampaign() {
 
     const fetchCampaign = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/campaigns/${id}`, {
+        const res = await axios.get(`https://campaignbuddy-prod.onrender.com/api/campaigns/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCampaign(res.data);
@@ -50,7 +50,7 @@ export default function SendCampaign() {
 
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/campaigns/${campaign.id}/send`,
+        `https://campaignbuddy-prod.onrender.com/api/campaigns/${campaign.id}/send`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
