@@ -13,7 +13,7 @@ export default function MailingListDetails() {
       try {
         const token = localStorage.getItem("token"); // Adjust if using another token strategy
 
-        const response = await axios.get(`http://localhost:8080/api/mailing-lists/${id}`, {
+        const response = await axios.get(`https://campaignbuddy-prod.onrender.com/api/mailing-lists/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
