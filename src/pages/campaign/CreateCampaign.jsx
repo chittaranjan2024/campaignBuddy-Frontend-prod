@@ -18,7 +18,7 @@ export default function CreateCampaign() {
   useEffect(() => {
     if (!userId || !token) return;
     axios
-      .get(`http://localhost:8080/api/mailing-lists/user/${userId}`, {
+      .get(`https://campaignbuddy-prod.onrender.com/api/mailing-lists/user/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMailingLists(res.data))
