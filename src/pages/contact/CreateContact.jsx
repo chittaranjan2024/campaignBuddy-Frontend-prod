@@ -32,7 +32,7 @@ export default function CreateContact() {
       , // ✅ Include ownerId in payload
     };
     try {
-      await axios.post("http://localhost:8080/api/contacts", payload, {
+      await axios.post("https://campaignbuddy-prod.onrender.com/api/contacts", payload, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`, // ✅ Add token here
