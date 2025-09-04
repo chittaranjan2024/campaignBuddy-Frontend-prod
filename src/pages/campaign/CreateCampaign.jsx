@@ -29,7 +29,7 @@ export default function CreateCampaign() {
   useEffect(() => {
     if (!userId || !token) return;
     axios
-      .get(`http://localhost:8080/api/templates/user/${userId}`, {
+      .get(`https://campaignbuddy-prod.onrender.com/api/templates/user/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setTemplates(res.data))
