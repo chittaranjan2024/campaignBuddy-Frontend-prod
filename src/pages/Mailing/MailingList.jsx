@@ -18,7 +18,7 @@ const MailingList = () => {
 
   const fetchMailingLists = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/mailing-lists/user/${userId}`, {
+      const response = await axios.get(`https://campaignbuddy-prod.onrender.com/api/mailing-lists/user/${userId}`, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
